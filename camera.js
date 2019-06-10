@@ -14,8 +14,8 @@ function getUserMedia(constraints, success, error) {
     }
 }
 
-var video = document.getElementByTd("video");
-var canvas = docuemnt.getElementById("canvas");
+var video = document.getElementById("video");
+var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 
 //成功的回调函数
@@ -33,7 +33,7 @@ function error(error) {
 }
 
 if (navigator.mediaDevices.getUserMedia || navigator.getUSerMedia ||
-    navigator.webkitGEtUserMedia || navigator.mozGetUserMedia) {
+    navigator.webkitGetUserMedia || navigator.mozGetUserMedia) {
         //调用用户媒体设备，访问摄像头
         getUserMedia({video : { width: 480, height: 320} }, success, error);
     } else {
@@ -41,6 +41,6 @@ if (navigator.mediaDevices.getUserMedia || navigator.getUSerMedia ||
     }
 
     //绑定拍照按钮的单击事件
-    document.getElementById("capture").addEve=ntListener("click", function () {
-        context.frawImage(video, 0, 0, 480, 320); //将video画面在canvas上绘制出来
+    document.getElementById("capture").addEventListener("click", function () {
+        context.drawImage(video, 0, 0, 480, 320); //将video画面在canvas上绘制出来
     });
