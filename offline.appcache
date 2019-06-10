@@ -1,0 +1,9 @@
+CACHE MAINFEST
+#cache之后的资源都会被缓存
+CACHE:
+main.html
+style.css
+main.js
+#network之后的资源不会被缓存，总是从线上获取
+NETWORK:
+account/

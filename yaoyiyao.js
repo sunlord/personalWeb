@@ -28,4 +28,4 @@ if (window.DeviceMotionEvent) {
     alert('您的设备不支持摇动！');
 }
 
-alert("我日你哥！")
+alert("我日你哥！");
