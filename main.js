@@ -20,7 +20,7 @@ window.online = function () {
         //如果数据存在，则保存到服务器
         saveOnline(data);
         //同时，清空本地的存储
-        this.localStorage.removeItem('data');
+        localStorage.removeItem('data');
     }
 };
 //保存内容的具体代码
