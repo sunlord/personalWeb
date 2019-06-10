@@ -25,7 +25,7 @@ function motionHandler(evt) {
 if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', motionHandler, false);
 }else {
-    alert('您的设备不支持摇动！');
+    alert('您的设备不支持位置感应！');
 }
 
 alert("我日你哥！");
