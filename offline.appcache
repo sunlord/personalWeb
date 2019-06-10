@@ -1,4 +1,4 @@
-CACHE MAINFEST
+CACHE MANIFEST
 #cache之后的资源都会被缓存
 CACHE:
 main.html
