@@ -12,7 +12,20 @@
     <div>
         <textarea id="content" cols="100" rows="20"></textarea>
     </div>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script>
+    //获取记录内容的文本域
+    var el = document.querySelector('#content');
+    //页面在入市，从本地获取存储的数据
+    el.vallue = localStorage.getItem('data') || '';
+    //为文本域DOM节点添加blur事件
+    el.addEventListener('blur', function () {
+        //获取文本域的内容
+        var data = el.value;
+        //保存到本地
+        localStorage.setItem('data', data);
+    });
+    </script>
     
 </body>
 </html>
