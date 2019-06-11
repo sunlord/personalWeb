@@ -1,0 +1,21 @@
+
+.note {
+    border: 1px solid #000;
+    width: 500px;
+    height: 200px;
+    margin: 5px;
+}
+
+
+
+.add_bq {
+    width: 10px;
+    height: 10px;
+}
+
+.tarea {
+    font-size: 20px;
+    width: 475px;
+    height: 180px;
+    margin-top: 7px;
+}

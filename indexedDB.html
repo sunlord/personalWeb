@@ -13,7 +13,7 @@
         <!-- 添加按钮 -->
         <div class="add">
             <p class="ic_add">+</p>
-            <p>添加便签</p>
+            <p class="add_bq">添加便签</p>
         </div>
     </div>
     <!-- 为了简化代码，基于jQuery开发 -->
@@ -22,14 +22,14 @@
     <script src="indexeddb.js"></script>
     <script>
     //预先定义每一个便签的HTML代码
-    var divstr = '<div class="note"><a class="close">X</a><textarea></textarea></div>';
+    var divstr = '<div class="note"><a class="close">X</a><textarea class="tarea"></textarea></div>';
     //实例化一个便签数据库、数据表
     var db = new LocalDB('db1','notes');
     //打开数据库
     db.open(function () {
         //页面初始化时，获取所有亦有便签
         db.getAll( function (data) {
-            var div = $ (divstr);
+            var div = $(divstr);
             div.data('id',data.id);
             div.find('textarea').val(data.content);
             //将便签插入添加按钮前边
