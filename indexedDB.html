@@ -17,7 +17,7 @@
         </div>
     </div>
     <!-- 为了简化代码，基于jQuery开发 -->
-    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- 操作 indexedDB的帮助类 -->
     <script src="indexeddb.js"></script>
     <script>
@@ -41,7 +41,7 @@
         var div = $(divstr);
         div.insertBefore(add);
         //添加一条空数据库到数据库
-        db.set({content:''},function (id) {
+        db.set({content:''}, function (id) {
             //将数据库生成的自增id赋值到便签上
             div.data('id', id);
         });
@@ -57,7 +57,7 @@
     //监听所有关闭按钮的单击事件
     .on('click', '.close', function () {
         if (confirm('确定删除此便签吗？')) {
-            var div = $ (this).parent();
+            var div = $(this).parent();
             //删除这条便签数据
             db.remove(div.data('id'));
             //删除这条便签DOM元素
