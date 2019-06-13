@@ -1,21 +1,49 @@
 
 .note {
+    float: left;
     border: 1px solid #000;
     width: 500px;
     height: 200px;
     margin: 5px;
+    padding-left: 5px;
+    background-color: #000;
 }
 
+.add {
+    cursor:pointer;
+    float: left;
+    border: 1px solid #000;
+    width: 500px;
+    height: 200px;
+    margin: 5px;
+    padding-left: 7px;
+    text-align: center;
+}
 
+.ic_add {
+    font-size: 60px;
+}
 
 .add_bq {
-    width: 10px;
-    height: 10px;
+    font-size: 20px;
 }
 
 .tarea {
     font-size: 20px;
-    width: 475px;
+    width: 490px;
     height: 180px;
-    margin-top: 7px;
+    margin-top: -15px;
+}
+
+.close {
+    cursor: pointer;
+    position: relative;
+    float: right;
+    border: 1px solid #66ccff;
+    background-color: #66ccff;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    text-align: center;
+    
 }

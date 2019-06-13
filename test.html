@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+</head>
+<body>
+    <div class="notes">
+        
+    </div>
+    <div class="note"><a class="close">X</a><textarea class="tarea"></textarea></div>
+    <script>
+
+        $('notes').on('click', '.close', function () {
+            if (confirm('确定删除此便签吗？')) {
+                var div = $(this).parent();
+                //删除这条便签数据
+                db.remove(div.data('id'));
+                //删除这条便签DOM元素
+                div.remove();
+            }
+        });
+        </script>
+    
+</body>
+</html>
