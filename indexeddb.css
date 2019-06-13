@@ -12,9 +12,9 @@
 .add {
     cursor:pointer;
     float: left;
-    border: 1px solid #000;
-    width: 500px;
-    height: 200px;
+    border: 2px solid #000;
+    width: 492px;
+    height: 198px;
     margin: 5px;
     padding-left: 7px;
     text-align: center;
