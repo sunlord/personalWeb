@@ -5,7 +5,7 @@
     width: 500px;
     height: 200px;
     margin: 5px;
-    padding-left: 5px;
+    padding-left: 1px;
     background-color: #000;
 }
 
@@ -30,9 +30,9 @@
 
 .tarea {
     font-size: 20px;
-    width: 490px;
-    height: 180px;
-    margin-top: -15px;
+    width: 494px;
+    height: 192px;
+    margin-top: -21px;
 }
 
 .close {
