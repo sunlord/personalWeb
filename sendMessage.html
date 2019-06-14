@@ -30,7 +30,7 @@
             };
             //监听postMessage发送的消息
             W.addEventListener('message', function(evt) {
-                if(evt.origin === 'https://sunlord.github.io/personalWeb') {    //判断消息的来源是否正确
+                if(evt.origin === 'https://sunlord.github.io/personalWeb/PostMessage.html') {    //判断消息的来源是否正确
                     handler(evt.data);                          //处理新的消息
                 }
             }, false);

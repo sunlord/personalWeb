@@ -30,7 +30,7 @@
                      var message = getMessage();
                      if (message !== null) {
                          //如果消息不为null，这发送消息到父页面
-                         window.parent.postMessage(message, 'https://sunlord.github.io/personalWeb');
+                         window.parent.postMessage(message, 'https://sunlord.github.io/personalWeb/sendMessage.html');
                      }
                      postMessageLoop();
                  },randomTime);
