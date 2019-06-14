@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>test</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="notes">
-        
-    </div>
-    <div class="note"><a class="close">X</a><textarea class="tarea"></textarea></div>
+    <canvas class="item" width="850" height="500"></canvas>
     <script>
+        let PieChart = function (selector, options) {
+    let canvas = "string" === typeof selector ? document.querySelector(selector) : null;
+    if (canvas === null) return false;
+    let defaultOptions = {
+        radius: 200,                                       //饼图半径
+        legendParms: {                                      //图例参数
+            font: "24px Arial",                             //图例字体属性
+            x: 30,                                          //图例x轴坐标
+            y: 30,                                          //图例y轴坐标
+            margin: 50,                                     //图例间距
+            width: 40,                                      //图例宽度
+            height: 24                                      //图例高度
+        }
+    }
+    this.context = canvas.getContext("2d");                 //获取context环境
+    this.width = canvas.getAttribute("width") || 300;
+    this.height = canvas.getAttribute("height") || 300;
+    this.options = Object.assign(defaultOptions, options);  //合并参数
+};
 
-        $('notes').on('click', '.close', function () {
-            if (confirm('确定删除此便签吗？')) {
-                var div = $(this).parent();
-                //删除这条便签数据
-                db.remove(div.data('id'));
-                //删除这条便签DOM元素
-                div.remove();
-            }
-        });
-        </script>
-    
+    </script>
 </body>
 </html>
