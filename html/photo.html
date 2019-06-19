@@ -31,17 +31,23 @@
 </head>
 <body>
     <div class="gallery">
-        <div class="item"><img src="images/1.jpg" alt="1"></div>
-        <div class="item"><img src="images/1.jpg" alt="2"></div>
+        <div class="item"><img src="../images/1.jpg" alt="1"></div>
+        <div class="item"><img src="../images/2.png" alt="2"></div>
     </div>
 
     <script>
         var $gallery = document.querySelector(".gallery");
-        $gallery.addEventLinstener("click", function (e) {
+        $gallery.addEventListener("click", function (e) {
             var classList = $gallery.classList,
             css_preview = "preview";
-            if (classList.contains(css_))
-        })
+            if (classList.contains(css_preview)) {
+                classList.remove(css_preview)
+                $gallery.style.width = 100 + "vw"
+            }else {
+                classList.add(css_preview);
+                $gallery.style.width = 100 * item.Length + "vw"
+            }
+        });
     </script>
     
     
